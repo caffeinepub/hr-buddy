@@ -1,0 +1,72 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T06:45:46.020Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-13",
+        "summary": "Add a 'Schedule a Demo' booking form section to the page. The form should collect the visitor's full name, work email address, company name, team size (dropdown: 1–10, 11–50, 51–200, 200+), and a preferred contact time (text or dropdown). Include a 'Book My Demo' submit button. On successful submission, display an inline confirmation message such as 'Thanks! A member of our team will reach out shortly to confirm your demo.' The form should be accessible via the 'Schedule a Demo' button in the CTA section (smooth scroll) and linked from the navbar.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/DemoBookingSection.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/CTASection.tsx",
+          "frontend/src/components/Navbar.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/DemoBookingSection.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/CTASection.tsx",
+          "frontend/src/components/Navbar.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Store demo booking submissions in the Motoko backend. Add a `DemoRequest` record type with fields: name (Text), email (Text), company (Text), teamSize (Text), preferredTime (Text), and submittedAt (Int timestamp). Expose a `submitDemoRequest` update method that validates the email is non-empty and stores the record, and a `getAllDemoRequests` query method that returns all stored requests.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Add a React Query mutation hook `useSubmitDemoRequest` in `frontend/src/hooks/useQueries.ts` that calls the backend `submitDemoRequest` method, mirroring the existing `useCaptureEmail` pattern.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useQueries.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useQueries.ts"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/CTASection.tsx",
+    "frontend/src/components/DemoBookingSection.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

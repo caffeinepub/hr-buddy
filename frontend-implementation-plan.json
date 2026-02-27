@@ -1,0 +1,57 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add Interactive Demo Request / Booking Form",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Add a 'Schedule a Demo' booking form section with smooth-scroll navigation and inline success messaging",
+      "acceptanceCriteria": [
+        "A visible 'Schedule a Demo' form section exists on the page with fields: full name, work email, company name, team size (dropdown), and preferred contact time.",
+        "All fields are validated client-side before submission (required fields, valid email format).",
+        "On successful submission, an inline success message is shown without a page reload.",
+        "The 'Schedule a Demo' button in the CTA section smooth-scrolls to this form.",
+        "The form section is included in the navbar navigation links.",
+        "The form handles loading and error states gracefully."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/DemoBookingSection.tsx",
+          "operation": "create",
+          "description": "Create a new form section component for demo booking that collects full name, work email, company name, team size (dropdown: 1–10, 11–50, 51–200, 200+), and preferred contact time. Include client-side validation for required fields and email format. Use the useSubmitDemoRequest hook for submission. Display inline loading, success ('Thanks! A member of our team will reach out shortly to confirm your demo.'), and error states. Style consistently with EmailCaptureSection using gradients and the HR Buddy brand color system."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the new DemoBookingSection component between the CTASection and EmailCaptureSection components to maintain logical content flow on the marketing page."
+        },
+        {
+          "path": "frontend/src/components/CTASection.tsx",
+          "operation": "modify",
+          "description": "Update the 'Schedule a Demo' button to smooth-scroll to the demo booking section by setting its href to '#demo-booking' and ensuring onClick prevents default navigation and scrolls smoothly to the target element."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Add a 'Schedule Demo' navigation link to both desktop and mobile menus that smooth-scrolls to the '#demo-booking' section, positioned appropriately in the navigation list alongside existing links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Add React Query mutation hook for demo request submission",
+      "acceptanceCriteria": [
+        "useSubmitDemoRequest mutation hook is defined and exported from useQueries.ts.",
+        "The hook calls the backend actor's submitDemoRequest method with all required parameters.",
+        "The hook exposes loading, error, and success states that the demo form component can consume."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a new useSubmitDemoRequest mutation hook that calls the backend actor's submitDemoRequest method, passing name, company, teamSize, preferredTime, and email parameters. Follow the existing useCaptureEmail pattern for structure, error handling, and state management. Export the hook for use in the DemoBookingSection component."
+        }
+      ]
+    }
+  ]
+}

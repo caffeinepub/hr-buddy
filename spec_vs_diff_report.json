@@ -1,0 +1,51 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T06:45:46.017Z",
+  "summary": "All three requirements (REQ-13, REQ-14, REQ-15) are substantially implemented. The diff shows a new DemoBookingSection component with all required fields and validation, backend main.mo with DemoRequest type and both methods, and the useSubmitDemoRequest hook in useQueries.ts. Minor observations: REQ-14 requires validation that name is non-empty in addition to email, but the backend only validates email format. All other acceptance criteria appear met.",
+  "missing_requirements": [
+    {
+      "id": "REQ-14",
+      "requirement": "`submitDemoRequest` validates that name is non-empty in addition to email before storing the record.",
+      "reason": "The backend main.mo only calls validateEmail (checks for '@' and '.'), but does not explicitly validate that the name field is non-empty. The AC states both email and name must be validated.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "A getAllDemoRequestsByEmail query method was added to the backend actor, filtering requests by email address.",
+      "reason": "This method was not requested in any requirement or acceptance criterion. It is additional unrequested functionality.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "A migration module (backend/migration.mo) was added to handle schema migration from old actor state.",
+      "reason": "No migration requirement was specified in the build request. This is additional infrastructure not requested.",
+      "evidence": [
+        "backend/migration.mo"
+      ]
+    },
+    {
+      "description": "The useCaptureEmail hook was refactored to internally call submitDemoRequest with placeholder values instead of a dedicated captureEmail backend method.",
+      "reason": "The build request did not ask for changes to the existing useCaptureEmail hook or its underlying backend call. This is a modification to existing functionality not requested.",
+      "evidence": [
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/App.tsx",
+    "frontend/src/components/CTASection.tsx",
+    "frontend/src/components/DemoBookingSection.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/hooks/useQueries.ts",
+    "project_state.json"
+  ]
+}

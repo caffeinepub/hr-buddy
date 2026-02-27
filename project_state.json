@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Conversion-focused marketing website for 'HR Buddy', an AI-powered recruitment assistant platform targeting small and medium-sized businesses. The site helps companies automate CV screening, shortlist candidates faster, and make data-driven hiring decisions. Key sections include: hero, features (AI candidate analysis, smart shortlisting, bias-reduction, hiring insights), testimonials, success metrics, partner mentions, and CTAs for free trial sign-up.",
+  "architectural_notes": [
+    "Website name is 'HR Buddy'; target audience is HR teams, hiring managers, and SMBs new to AI tools",
+    "Design should feel simple, trustworthy, and approachable — avoid overly technical or intimidating AI language"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-a-full-page-conversion-focused-marketing-website-for-hr-buddy-an-ai-powered-recruitment-assistant-platform-targeting-small-and-medium-sized-businesses-the-site-must-be-a-single-page-react-application-with-smooth-scroll-navigation-between-sections",
+      "title": "Build a full-page, conversion-focused marketing website for 'HR Buddy', an AI-powered recruitment assistant platform targeting small and medium-sized businesses. The site must be a single-page React application with smooth scroll navigation between sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-sticky-top-navigation-bar-with-the-hr-buddy-logo-wordmark-on-the-left-navigation-links-features-how-it-works-testimonials-pricing-contact-in-the-center-and-a-start-free-trial-cta-button-on-the-right",
+      "title": "Implement a sticky top navigation bar with the HR Buddy logo/wordmark on the left, navigation links (Features, How It Works, Testimonials, Pricing, Contact) in the center, and a 'Start Free Trial' CTA button on the right.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-bold-hero-section-with-a-large-headline-emphasizing-speed-and-accuracy-e-g-hire-smarter-screen-faster-decide-with-confidence-a-supporting-sub-headline-describing-the-platform-value-for-smbs-a-primary-start-free-trial-cta-button-and-a-secondary-see-how-it-works-link-display-a-hero-illustration-or-mockup-image-showing-the-hr-buddy-dashboard",
+      "title": "Create a bold hero section with a large headline emphasizing speed and accuracy (e.g., 'Hire Smarter. Screen Faster. Decide with Confidence.'), a supporting sub-headline describing the platform value for SMBs, a primary 'Start Free Trial' CTA button, and a secondary 'See How It Works' link. Display a hero illustration or mockup image showing the HR Buddy dashboard.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-key-features-section-with-four-feature-cards-covering-1-ai-candidate-analysis-intelligent-cv-parsing-and-scoring-2-smart-shortlisting-automated-ranking-of-top-candidates-3-bias-reduction-tools-anonymised-screening-for-fair-evaluation-4-hiring-insights-clear-dashboards-and-data-driven-recommendations-each-card-should-include-an-icon-a-short-title-and-a-2-3-sentence-description",
+      "title": "Build a 'Key Features' section with four feature cards covering: (1) AI Candidate Analysis — intelligent CV parsing and scoring; (2) Smart Shortlisting — automated ranking of top candidates; (3) Bias-Reduction Tools — anonymised screening for fair evaluation; (4) Hiring Insights — clear dashboards and data-driven recommendations. Each card should include an icon, a short title, and a 2–3 sentence description.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-how-it-works-section-with-a-3-step-process-flow-step-1-upload-cvs-and-define-your-job-criteria-step-2-hr-buddy-s-ai-screens-ranks-and-shortlists-candidates-automatically-step-3-review-your-curated-shortlist-and-make-confident-hiring-decisions-display-steps-horizontally-on-desktop-with-numbered-indicators-and-connecting-arrows",
+      "title": "Add a 'How It Works' section with a 3-step process flow: Step 1 — Upload CVs and define your job criteria; Step 2 — HR Buddy's AI screens, ranks, and shortlists candidates automatically; Step 3 — Review your curated shortlist and make confident hiring decisions. Display steps horizontally on desktop with numbered indicators and connecting arrows.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-success-metrics-section-displaying-3-4-key-statistics-in-large-bold-numbers-to-reinforce-platform-credibility-use-realistic-placeholder-metrics-such-as-75-faster-screening-10-000-candidates-processed-92-hiring-manager-satisfaction-3x-more-shortlisting-accuracy-display-in-a-horizontally-spaced-banner-row",
+      "title": "Create a 'Success Metrics' section displaying 3–4 key statistics in large, bold numbers to reinforce platform credibility. Use realistic placeholder metrics such as: '75% Faster Screening', '10,000+ Candidates Processed', '92% Hiring Manager Satisfaction', '3x More Shortlisting Accuracy'. Display in a horizontally spaced banner row.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-testimonials-section-with-3-testimonial-cards-featuring-a-quote-the-reviewer-s-name-job-title-and-company-name-testimonials-should-reflect-hiring-managers-and-hr-professionals-from-smbs-who-found-hr-buddy-easy-to-use-and-effective",
+      "title": "Build a 'Testimonials' section with 3 testimonial cards featuring a quote, the reviewer's name, job title, and company name. Testimonials should reflect hiring managers and HR professionals from SMBs who found HR Buddy easy to use and effective.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-trusted-partners-as-seen-in-section-displaying-5-6-placeholder-company-logo-badges-greyscale-arranged-in-a-horizontal-row-to-reinforce-credibility-and-enterprise-trust",
+      "title": "Add a 'Trusted Partners' / 'As Seen In' section displaying 5–6 placeholder company logo badges (greyscale) arranged in a horizontal row to reinforce credibility and enterprise trust.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-mid-page-conversion-cta-section-with-a-high-contrast-background-a-compelling-headline-e-g-ready-to-transform-your-hiring-process-a-short-supporting-sentence-and-a-large-start-your-free-trial-primary-button-alongside-a-schedule-a-demo-secondary-button",
+      "title": "Implement a mid-page conversion CTA section with a high-contrast background, a compelling headline (e.g., 'Ready to Transform Your Hiring Process?'), a short supporting sentence, and a large 'Start Your Free Trial' primary button alongside a 'Schedule a Demo' secondary button.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-simple-email-capture-free-trial-sign-up-section-with-a-centered-form-containing-a-single-email-input-field-and-a-get-early-access-submit-button-on-submission-show-an-inline-success-message-thanks-we-ll-be-in-touch-soon-store-submitted-emails-in-the-motoko-backend",
+      "title": "Build a simple email capture / free trial sign-up section with a centered form containing a single email input field and a 'Get Early Access' submit button. On submission, show an inline success message ('Thanks! We'll be in touch soon.'). Store submitted emails in the Motoko backend.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-footer-with-the-hr-buddy-logo-wordmark-a-short-tagline-navigation-links-grouped-into-columns-product-company-resources-legal-social-media-icon-links-linkedin-twitter-x-and-a-copyright-line",
+      "title": "Create a footer with the HR Buddy logo/wordmark, a short tagline, navigation links grouped into columns (Product, Company, Resources, Legal), social media icon links (LinkedIn, Twitter/X), and a copyright line.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-professional-trustworthy-visual-theme-throughout-the-site-use-a-clean-off-white-light-grey-background-deep-slate-charcoal-for-body-text-a-rich-teal-or-forest-green-as-the-primary-accent-for-ctas-and-highlights-and-warm-amber-gold-as-a-secondary-accent-for-icons-and-badges-typography-should-use-a-modern-sans-serif-pairing-e-g-a-heavier-weight-for-headings-regular-weight-for-body-maintain-generous-whitespace-and-clear-visual-hierarchy-throughout-all-sections",
+      "title": "Apply a professional, trustworthy visual theme throughout the site: use a clean off-white/light grey background, deep slate/charcoal for body text, a rich teal or forest green as the primary accent for CTAs and highlights, and warm amber/gold as a secondary accent for icons and badges. Typography should use a modern sans-serif pairing (e.g., a heavier weight for headings, regular weight for body). Maintain generous whitespace and clear visual hierarchy throughout all sections.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-schedule-a-demo-booking-form-section-to-the-page-the-form-should-collect-the-visitor-s-full-name-work-email-address-company-name-team-size-dropdown-1-10-11-50-51-200-200-and-a-preferred-contact-time-text-or-dropdown-include-a-book-my-demo-submit-button-on-successful-submission-display-an-inline-confirmation-message-such-as-thanks-a-member-of-our-team-will-reach-out-shortly-to-confirm-your-demo-the-form-should-be-accessible-via-the-schedule-a-demo-button-in-the-cta-section-smooth-scroll-and-linked-from-the-navbar",
+      "title": "Add a 'Schedule a Demo' booking form section to the page. The form should collect the visitor's full name, work email address, company name, team size (dropdown: 1–10, 11–50, 51–200, 200+), and a preferred contact time (text or dropdown). Include a 'Book My Demo' submit button. On successful submission, display an inline confirmation message such as 'Thanks! A member of our team will reach out shortly to confirm your demo.' The form should be accessible via the 'Schedule a Demo' button in the CTA section (smooth scroll) and linked from the navbar.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-react-query-mutation-hook-usesubmitdemorequest-in-frontend-src-hooks-usequeries-ts-that-calls-the-backend-submitdemorequest-method-mirroring-the-existing-usecaptureemail-pattern",
+      "title": "Add a React Query mutation hook `useSubmitDemoRequest` in `frontend/src/hooks/useQueries.ts` that calls the backend `submitDemoRequest` method, mirroring the existing `useCaptureEmail` pattern.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with bold headline emphasizing speed and accuracy, and primary CTA (free trial)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Features section highlighting AI candidate analysis, smart shortlisting, bias-reduction tools, and hiring insights",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Testimonials and success metrics section for social proof and credibility",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Partner/client mentions section to reinforce trust",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Multiple CTAs throughout the page encouraging free trial sign-up or learn more",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Professional color palette with subtle accents and clean visual hierarchy",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Responsive, conversion-focused layout with balanced typography and spacing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Interactive demo request / booking form so visitors can schedule a trial directly from the site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Store demo booking submissions in the Motoko backend. Add a `DemoRequest` record type with fields: name (Text), email (Text), company (Text), teamSize (Text), preferredTime (Text), and submittedAt (Int timestamp). Expose a `submitDemoRequest` update method that validates the email is non-empty and stores the record, and a `getAllDemoRequests` query method that returns all stored requests.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "HR Buddy",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

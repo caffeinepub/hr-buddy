@@ -1,0 +1,83 @@
+{
+  "kind": "build_request",
+  "title": "Add Interactive Demo Request / Booking Form",
+  "projectName": "HR Buddy",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Add a 'Schedule a Demo' booking form section to the page. The form should collect the visitor's full name, work email address, company name, team size (dropdown: 1–10, 11–50, 51–200, 200+), and a preferred contact time (text or dropdown). Include a 'Book My Demo' submit button. On successful submission, display an inline confirmation message such as 'Thanks! A member of our team will reach out shortly to confirm your demo.' The form should be accessible via the 'Schedule a Demo' button in the CTA section (smooth scroll) and linked from the navbar.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Yes do that",
+          "it should really work"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A visible 'Schedule a Demo' form section exists on the page with fields: full name, work email, company name, team size (dropdown), and preferred contact time.",
+        "All fields are validated client-side before submission (required fields, valid email format).",
+        "On successful submission, an inline success message is shown without a page reload.",
+        "The 'Schedule a Demo' button in the CTA section smooth-scrolls to this form.",
+        "The form section is included in the navbar navigation links.",
+        "The form handles loading and error states gracefully."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Store demo booking submissions in the Motoko backend. Add a `DemoRequest` record type with fields: name (Text), email (Text), company (Text), teamSize (Text), preferredTime (Text), and submittedAt (Int timestamp). Expose a `submitDemoRequest` update method that validates the email is non-empty and stores the record, and a `getAllDemoRequests` query method that returns all stored requests.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "it should really work"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A `DemoRequest` stable variable exists in the backend actor to persist demo requests across upgrades.",
+        "`submitDemoRequest` accepts all required fields, validates that email and name are non-empty, and stores the record with a timestamp.",
+        "`getAllDemoRequests` returns the full list of stored demo requests.",
+        "The frontend demo form successfully calls `submitDemoRequest` and receives a confirmation response."
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Add a React Query mutation hook `useSubmitDemoRequest` in `frontend/src/hooks/useQueries.ts` that calls the backend `submitDemoRequest` method, mirroring the existing `useCaptureEmail` pattern.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "it should really work"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`useSubmitDemoRequest` mutation hook is defined and exported from useQueries.ts.",
+        "The hook calls the backend actor's `submitDemoRequest` method with all required parameters.",
+        "The hook exposes loading, error, and success states that the demo form component can consume."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files listed under frontend.immutablePaths.",
+    "All backend logic must remain in the single main actor (backend/main.mo).",
+    "Preserve all existing sections, styling, and functionality of the marketing site."
+  ],
+  "nonGoals": [
+    "Payment processing or subscription management.",
+    "Calendar integration or automated scheduling (e.g., Calendly).",
+    "Email sending or automated follow-up notifications.",
+    "Authentication or user accounts for demo bookers.",
+    "Monetisation strategy implementation — this is out of scope for the build."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
